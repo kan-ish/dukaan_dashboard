@@ -122,3 +122,67 @@ th {
 
 	color: #4d4d4d;
 }
+
+.pagination,
+.pages,
+.pageNum,
+.previousPage,
+.nextPage {
+	display: flex;
+	align-items: center;
+}
+
+.pagination {
+	justify-content: center;
+	gap: 24px;
+}
+
+.previousPage {
+	padding: 0 12px 0 6px;
+}
+
+.nextPage {
+	padding: 0 6px 0 12px;
+}
+
+.previousPage,
+.nextPage {
+	gap: 6px;
+	width: fit-content;
+	height: 32px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-weight: 500;
+}
+
+.previousPage,
+.pageNum,
+.nextPage {
+	font-family: Inter;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #4d4d4d;
+
+	cursor: pointer;
+}
+
+.pages {
+	gap: 8px;
+}
+
+.pageNum {
+	width: 28px;
+	height: 28px;
+	border-radius: 4px;
+	font-weight: 400;
+
+	justify-content: center;
+}
+
+.activePage {
+	background-color: #146eb4;
+	color: #fff;
+	font-weight: 500;
+}

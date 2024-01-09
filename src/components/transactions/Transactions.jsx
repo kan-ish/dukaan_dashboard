@@ -58,17 +58,32 @@ const Transactions = () => {
 
 				<div className={transactionsStyles.pagination}>
 					<div className={transactionsStyles.previousPage}>
-						<IconChevronLeft />
+						<IconChevronLeft size={18} />
 						Previous
 					</div>
 
 					<div className={transactionsStyles.pages}>
 						<span className={transactionsStyles.pageNum}>1</span>
+						<span className={transactionsStyles.pageNum}>2</span>
+						<span className={transactionsStyles.pageNum}>...</span>
+						<span
+							className={`${transactionsStyles.pageNum} ${transactionsStyles.activePage}`}
+						>
+							10
+						</span>
+						<span className={transactionsStyles.pageNum}>11</span>
+						<span className={transactionsStyles.pageNum}>12</span>
+						<span className={transactionsStyles.pageNum}>13</span>
+						<span className={transactionsStyles.pageNum}>14</span>
+						<span className={transactionsStyles.pageNum}>15</span>
+						<span className={transactionsStyles.pageNum}>16</span>
+						<span className={transactionsStyles.pageNum}>17</span>
+						<span className={transactionsStyles.pageNum}>18</span>
 					</div>
 
 					<div className={transactionsStyles.nextPage}>
 						Next
-						<IconChevronRight />
+						<IconChevronRight size={18} />
 					</div>
 				</div>
 			</div>
