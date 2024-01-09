@@ -1,0 +1,27 @@
+.dataRow td {
+	vertical-align: middle;
+	padding: 0 12px;
+}
+
+.dataRow {
+	height: 48px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+td.tableNumData {
+	text-align: right;
+}
+
+td {
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #1a181e;
+}
+td.orderId {
+	font-weight: 500;
+	color: #146eb4;
+}

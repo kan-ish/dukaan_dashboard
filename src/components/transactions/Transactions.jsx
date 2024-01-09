@@ -1,11 +1,13 @@
 import transactionsStyles from "./Transactions.module.css";
-import { IconSearch } from "@tabler/icons-react";
+import {
+	IconSearch,
+	IconChevronLeft,
+	IconChevronRight,
+} from "@tabler/icons-react";
 import transactionData from "../../utils/data.json";
+import TransactionRecord from "./transactionRecord/TransactionRecord";
 
 const Transactions = () => {
-	const temp = transactionData[0].orderDate;
-	console.log(temp);
-
 	return (
 		<div className={transactionsStyles.container}>
 			<div className={transactionsStyles.transactionsHeader}>
@@ -49,23 +51,26 @@ const Transactions = () => {
 						</tr>
 
 						{transactionData.map((record) => {
-							return (
-								<tr key={record.id} className={transactionsStyles.dataRow}>
-									<td className={transactionsStyles.orderId}>
-										{record.orderId}
-									</td>
-									<td>7 July, 2023</td>
-									<td className={transactionsStyles.tableNumData}>
-										{record.orderAmt}
-									</td>
-									<td className={transactionsStyles.tableNumData}>
-										{record.trxnFees}
-									</td>
-								</tr>
-							);
+							return <TransactionRecord record={record} />;
 						})}
 					</tbody>
 				</table>
+
+				<div className={transactionsStyles.pagination}>
+					<div className={transactionsStyles.previousPage}>
+						<IconChevronLeft />
+						Previous
+					</div>
+
+					<div className={transactionsStyles.pages}>
+						<span className={transactionsStyles.pageNum}>1</span>
+					</div>
+
+					<div className={transactionsStyles.nextPage}>
+						Next
+						<IconChevronRight />
+					</div>
+				</div>
 			</div>
 		</div>
 	);
