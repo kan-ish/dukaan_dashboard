@@ -1,4 +1,5 @@
 import Overview from "../overview/Overview";
+import Transactions from "../transactions/Transactions";
 import paymentsStyles from "./Payments.module.css";
 
 const Payments = () => {
@@ -8,7 +9,9 @@ const Payments = () => {
 				<Overview />
 			</div>
 
-			<div className={paymentsStyles.transactionsContainer}></div>
+			<div className={paymentsStyles.transactionsContainer}>
+				<Transactions />
+			</div>
 		</div>
 	);
 };

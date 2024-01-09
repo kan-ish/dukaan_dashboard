@@ -1,7 +1,15 @@
 .container {
 	padding: 32px;
+
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .paymentsOverviewContainer {
 	margin-bottom: 32px;
+}
+
+.transactionsContainer {
+	flex: 1;
 }

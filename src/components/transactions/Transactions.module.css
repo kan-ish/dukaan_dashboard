@@ -1,0 +1,89 @@
+.container {
+	height: 100%;
+}
+
+.transactionsHeader {
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	letter-spacing: 0em;
+
+	color: #1a181e;
+	margin-bottom: 20px;
+}
+
+.transactionsContent {
+	padding: 12px 12px 24px 12px;
+}
+
+.tableControls {
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 12px;
+}
+
+.transactionSearch {
+	width: 248px;
+	height: 40px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	padding: 0 16px;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.transactionSearch input {
+	width: 100%;
+
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #999999;
+}
+.transactionSearch input:focus-within {
+	outline: none;
+}
+
+.tableControlsRight {
+	display: flex;
+	gap: 12px;
+}
+
+.sortTable {
+	width: 79px;
+	height: 36px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+
+	font-family: Inter;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+
+	color: #4d4d4d;
+}
+
+.downloadTable {
+	width: 36px;
+	height: 36px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
