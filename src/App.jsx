@@ -1,11 +1,14 @@
-import Dashboard from "./components/dashboard/Dashboard";
+import Layout from "./components/partias/layout/Layout";
+import Payments from "./components/payments/Payments";
 
 import "./App.css";
 
 function App() {
 	return (
 		<>
-			<Dashboard />
+			<Layout>
+				<Payments />
+			</Layout>
 		</>
 	);
 }

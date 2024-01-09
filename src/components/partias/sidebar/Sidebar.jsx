@@ -8,18 +8,18 @@ const Sidebar = () => {
 		companyThumbnail: "companythumbnail.png",
 	};
 	const companyTabs = [
-		{ name: "Home", icon: "home.png" },
-		{ name: "Orders", icon: "home.png" },
-		{ name: "Products", icon: "products.png" },
-		{ name: "Delivery", icon: "delivery.png" },
-		{ name: "Marketing", icon: "marketing.png" },
-		{ name: "Analytics", icon: "analytics.png" },
-		{ name: "Payments", icon: "payments.png" },
-		{ name: "Tools", icon: "tools.png" },
-		{ name: "Discounts", icon: "discounts.png" },
-		{ name: "Audience", icon: "audience.png" },
-		{ name: "Appearance", icon: "appearance.png" },
-		{ name: "Plugins", icon: "plugins.png" },
+		{ name: "Home", icon: "home.png", id: 0 },
+		{ name: "Orders", icon: "home.png", id: 1 },
+		{ name: "Products", icon: "products.png", id: 2 },
+		{ name: "Delivery", icon: "delivery.png", id: 3 },
+		{ name: "Marketing", icon: "marketing.png", id: 4 },
+		{ name: "Analytics", icon: "analytics.png", id: 5 },
+		{ name: "Payments", icon: "payments.png", id: 6 },
+		{ name: "Tools", icon: "tools.png", id: 7 },
+		{ name: "Discounts", icon: "discounts.png", id: 8 },
+		{ name: "Audience", icon: "audience.png", id: 9 },
+		{ name: "Appearance", icon: "appearance.png", id: 10 },
+		{ name: "Plugins", icon: "plugins.png", id: 11 },
 	];
 
 	return (
@@ -54,17 +54,15 @@ const Sidebar = () => {
 				<div className={sidebarStyles.companyTabs}>
 					{companyTabs.map((tab) => {
 						return (
-							<>
-								<div className={sidebarStyles.tabItem}>
-									<div className={sidebarStyles.tabIcon}>
-										<img src={tab.icon} alt="" />
-									</div>
-
-									<div className={sidebarStyles.tabName}>
-										{tab.name}
-									</div>
+							<div key={tab.id} className={sidebarStyles.tabItem}>
+								<div className={sidebarStyles.tabIcon}>
+									<img src={tab.icon} alt="" />
 								</div>
-							</>
+
+								<div className={sidebarStyles.tabName}>
+									{tab.name}
+								</div>
+							</div>
 						);
 					})}
 				</div>
