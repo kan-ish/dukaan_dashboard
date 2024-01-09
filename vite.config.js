@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "/dukaan_dash/",
+	base: "/dukaan_dashboard/",
 	plugins: [react()],
 });
