@@ -69,6 +69,24 @@ const Sidebar = () => {
 					})}
 				</div>
 			</div>
+
+			<div className={sidebarStyles.availableCredits}>
+				<div className={sidebarStyles.availableCreditsLeft}>
+					<div className={sidebarStyles.walletIcon}>
+						<img src="wallet.png" alt="" />
+					</div>
+				</div>
+
+				<div className={sidebarStyles.availableCreditsRight}>
+					<div className={sidebarStyles.availableCreditsText}>
+						Available credits
+					</div>
+
+					<div className={sidebarStyles.availableCreditsAmt}>
+						222.10
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };
