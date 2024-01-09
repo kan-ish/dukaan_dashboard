@@ -99,14 +99,19 @@
 }
 
 .headingRow {
-	background-color: #f2f2f2;
 	text-align: left;
 	height: 40px;
-	border-radius: 4px;
 }
 .headingRow th {
+	background-color: #f2f2f2;
 	vertical-align: middle;
 	padding: 0 12px;
+}
+.headingRow th:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.headingRow th:last-child {
+	border-radius: 0 4px 4px 0;
 }
 
 th.tableNumData {
