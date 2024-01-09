@@ -91,3 +91,56 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.transactionsTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.headingRow {
+	background-color: #f2f2f2;
+	text-align: left;
+	height: 40px;
+}
+.headingRow th,
+.dataRow td {
+	vertical-align: middle;
+	padding: 0 12px;
+}
+
+.dataRow {
+	height: 48px;
+}
+
+.dataRow {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+th.tableNumData,
+td.tableNumData {
+	text-align: right;
+}
+
+th {
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #4d4d4d;
+}
+
+td {
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #1a181e;
+}
+td.orderId {
+	font-weight: 500;
+	color: #146eb4;
+}

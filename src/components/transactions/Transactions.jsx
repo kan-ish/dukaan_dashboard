@@ -1,7 +1,11 @@
 import transactionsStyles from "./Transactions.module.css";
 import { IconSearch } from "@tabler/icons-react";
+import transactionData from "../../utils/data.json";
 
 const Transactions = () => {
+	const temp = transactionData[0].orderDate;
+	console.log(temp);
+
 	return (
 		<div className={transactionsStyles.container}>
 			<div className={transactionsStyles.transactionsHeader}>
@@ -38,16 +42,28 @@ const Transactions = () => {
 						<tr className={transactionsStyles.headingRow}>
 							<th>Order ID</th>
 							<th>Order Date</th>
-							<th>Order Amount</th>
-							<th>Transaction fees</th>
+							<th className={transactionsStyles.tableNumData}>Order Amount</th>
+							<th className={transactionsStyles.tableNumData}>
+								Transaction fees
+							</th>
 						</tr>
 
-						<tr>
-							<td>#281209</td>
-							<td>7 July, 2023</td>
-							<td>₹1,278.23</td>
-							<td>₹22</td>
-						</tr>
+						{transactionData.map((record) => {
+							return (
+								<tr key={record.id} className={transactionsStyles.dataRow}>
+									<td className={transactionsStyles.orderId}>
+										{record.orderId}
+									</td>
+									<td>7 July, 2023</td>
+									<td className={transactionsStyles.tableNumData}>
+										{record.orderAmt}
+									</td>
+									<td className={transactionsStyles.tableNumData}>
+										{record.trxnFees}
+									</td>
+								</tr>
+							);
+						})}
 					</tbody>
 				</table>
 			</div>
