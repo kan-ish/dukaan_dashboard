@@ -1,0 +1,35 @@
+.container {
+	background-color: red;
+	width: 100%;
+	height: 64px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 32px;
+}
+
+.headerLeft {
+	display: flex;
+}
+
+.searchBarContainer {
+	display: flex;
+
+	background-color: #f2f2f2;
+	width: 400px;
+	height: 40px;
+	border-radius: 6px;
+	padding: 0 8px;
+}
+
+.searchIcon {
+	width: 16px;
+	height: 100%;
+}
+.searchInput {
+	flex: 1;
+	height: 100%;
+
+	background-color: inherit;
+}
