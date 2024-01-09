@@ -70,7 +70,7 @@ const Transactions = () => {
 						</tr>
 
 						{transactionData.map((record) => {
-							return <TransactionRecord record={record} />;
+							return <TransactionRecord key={record.id} record={record} />;
 						})}
 					</tbody>
 				</table>
