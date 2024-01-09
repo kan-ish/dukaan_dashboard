@@ -3,6 +3,7 @@ import {
 	IconSearch,
 	IconChevronLeft,
 	IconChevronRight,
+	IconInfoCircle,
 } from "@tabler/icons-react";
 import transactionData from "../../utils/data.json";
 import TransactionRecord from "./transactionRecord/TransactionRecord";
@@ -43,10 +44,28 @@ const Transactions = () => {
 					<tbody>
 						<tr className={transactionsStyles.headingRow}>
 							<th>Order ID</th>
-							<th>Order Date</th>
+							<th>
+								<div className={transactionsStyles.orderDate}>
+									Order Date
+									<div className={transactionsStyles.currentSortIconContainer}>
+										<img
+											src="headericon2.png"
+											className={transactionsStyles.currentSortIcon}
+											alt="Descending sort"
+										/>
+									</div>
+								</div>
+							</th>
 							<th className={transactionsStyles.tableNumData}>Order Amount</th>
 							<th className={transactionsStyles.tableNumData}>
-								Transaction fees
+								<div className={transactionsStyles.transactionFees}>
+									Transaction fees{" "}
+									<IconInfoCircle
+										className={transactionsStyles.info}
+										size={14}
+										color="#4D4D4D"
+									/>
+								</div>
 							</th>
 						</tr>
 

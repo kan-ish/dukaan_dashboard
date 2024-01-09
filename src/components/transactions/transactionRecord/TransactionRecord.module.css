@@ -24,4 +24,5 @@ td {
 td.orderId {
 	font-weight: 500;
 	color: #146eb4;
+	cursor: pointer;
 }

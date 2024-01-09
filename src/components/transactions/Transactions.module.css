@@ -65,6 +65,7 @@
 	height: 36px;
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
+	cursor: pointer;
 
 	display: flex;
 	justify-content: center;
@@ -86,6 +87,7 @@
 	height: 36px;
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
+	cursor: pointer;
 
 	display: flex;
 	justify-content: center;
@@ -114,8 +116,32 @@
 	border-radius: 0 4px 4px 0;
 }
 
+.orderDate,
+.transactionFees {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.currentSortIconContainer {
+	display: flex;
+	cursor: pointer;
+}
+
+.transactionFees {
+	justify-content: flex-end;
+}
+.transactionFees .info {
+	cursor: pointer;
+}
+
+.headingRow th .currentSortIcon {
+	margin-left: 4px;
+	width: 8px;
+}
+
 th.tableNumData {
 	text-align: right;
+	vertical-align: middle;
 }
 
 th {
