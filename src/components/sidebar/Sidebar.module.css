@@ -1,0 +1,110 @@
+.container {
+	height: 100%;
+	background-color: #1e2640;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 16px 8px;
+}
+
+.allcompanySpecificStuff {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	width: 100%;
+}
+
+.companyHeader {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	height: 42px;
+	width: 100%;
+	padding: 0 8px;
+
+	margin-bottom: 24px;
+}
+
+.companyHeaderLeft {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 42px;
+}
+
+.companyThumbnail {
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	object-fit: fill;
+}
+
+.companyThumbnail img {
+	height: 100%;
+}
+
+.companyHeaderRight {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.companyDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.companyName {
+	font-family: Inter;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: 0em;
+
+	color: #fff;
+}
+.companyLink {
+	font-family: Inter;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 0em;
+
+	color: #fff;
+	opacity: 0.8;
+}
+
+.companyTabs {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+.tabItem {
+	padding: 0 16px;
+	height: 36px;
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.tabName {
+	font-family: Inter;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	color: #fff;
+}

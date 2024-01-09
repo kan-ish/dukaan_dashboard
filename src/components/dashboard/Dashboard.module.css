@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+}
+
+.sidebar {
+	width: 224px;
+}
+
+.stage {
+	flex: 1;
+}
