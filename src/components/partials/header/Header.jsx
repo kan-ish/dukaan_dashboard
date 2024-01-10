@@ -9,7 +9,7 @@ const Header = ({ isSideBarOpen, setIsSideBarOpen }) => {
 				<div
 					className={headerStyles.sideBarToggle}
 					onClick={() => setIsSideBarOpen(!isSideBarOpen)}>
-					<IconMenu2 size={18} />
+					<IconMenu2 size={22} />
 				</div>
 
 				<div className={headerStyles.pageTitle}>Payments</div>

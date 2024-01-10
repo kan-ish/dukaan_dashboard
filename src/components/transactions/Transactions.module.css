@@ -23,17 +23,19 @@
 
 .tableControls {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 
 	margin-bottom: 12px;
 }
 
 .transactionSearch {
-	width: 248px;
+	max-width: 248px;
 	height: 40px;
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
 	padding: 0 16px;
+	margin-right: 15px;
 
 	display: flex;
 	align-items: center;
@@ -61,8 +63,9 @@
 }
 
 .sortTable {
-	width: 79px;
+	width: fit-content;
 	height: 36px;
+	padding: 0 10px;
 	border: 1px solid #d9d9d9;
 	border-radius: 4px;
 	cursor: pointer;
@@ -216,4 +219,19 @@ th {
 	background-color: #146eb4;
 	color: #fff;
 	font-weight: 500;
+}
+
+@media (max-width: 900px) {
+	.transactionsContent {
+		width: 100%;
+		overflow: scroll;
+	}
+
+	.headingRow {
+		overflow-x: scroll;
+	}
+
+	.sortTableText {
+		display: none;
+	}
 }

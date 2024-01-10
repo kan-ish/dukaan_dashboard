@@ -22,11 +22,16 @@
 .children {
 	flex: 1;
 	overflow: scroll;
+	margin-bottom: 50px;
 }
 
 @media (max-width: 900px) {
 	.container {
 		position: relative;
+	}
+
+	.main {
+		width: 100%;
 	}
 
 	.sidebar {

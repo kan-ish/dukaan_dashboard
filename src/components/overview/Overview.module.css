@@ -82,3 +82,9 @@
 
 	color: #1a181e;
 }
+
+@media (max-width: 900px) {
+	.overviewCards {
+		flex-direction: column;
+	}
+}

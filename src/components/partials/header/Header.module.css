@@ -61,6 +61,8 @@
 	height: 40px;
 	border-radius: 6px;
 	padding: 0 16px;
+
+	margin: 0 10px;
 }
 
 .searchIcon {
@@ -107,15 +109,31 @@
 }
 
 @media (max-width: 900px) {
+	.container {
+		padding: 0 20px;
+	}
+
+	.headerLeft {
+		gap: 4px;
+	}
+
+	.sideBarToggle {
+		margin-right: 4px;
+	}
+
+	.headerRightIcon {
+		width: 30px;
+		height: 30px;
+	}
+	.headerRightIcon img {
+		width: 50%;
+	}
+
 	.sideBarToggle {
 		display: block;
 	}
 
 	.pageHelpText {
 		display: none;
-	}
-
-	.searchBarContainer {
-		width: 21%;
 	}
 }

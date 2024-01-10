@@ -38,7 +38,9 @@ const Transactions = () => {
 
 					<div className={transactionsStyles.tableControlsRight}>
 						<div className={transactionsStyles.sortTable}>
-							Sort
+							<span className={transactionsStyles.sortTableText}>
+								Sort
+							</span>
 							<img src="sort.png" alt="sort" />
 						</div>
 

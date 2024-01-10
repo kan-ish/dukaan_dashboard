@@ -26,3 +26,9 @@ td.orderId {
 	color: #146eb4;
 	cursor: pointer;
 }
+
+@media (max-width: 900px) {
+	.dataRow {
+		overflow-x: scroll;
+	}
+}
