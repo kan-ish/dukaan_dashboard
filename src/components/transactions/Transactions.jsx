@@ -7,8 +7,16 @@ import {
 } from "@tabler/icons-react";
 import transactionData from "../../utils/data.json";
 import TransactionRecord from "./transactionRecord/TransactionRecord";
+import { useState } from "react";
 
 const Transactions = () => {
+	const [currentPage, setCurrentPage] = useState(1);
+
+	const totalPages =
+		transactionData.length % 20 > 0
+			? Math.ceil(transactionData.length / 20)
+			: Math.ceil(transactionData.length / 20);
+
 	return (
 		<div className={transactionsStyles.container}>
 			<div className={transactionsStyles.transactionsHeader}>
@@ -47,18 +55,28 @@ const Transactions = () => {
 							<th>
 								<div className={transactionsStyles.orderDate}>
 									Order Date
-									<div className={transactionsStyles.currentSortIconContainer}>
+									<div
+										className={
+											transactionsStyles.currentSortIconContainer
+										}>
 										<img
 											src="headericon2.png"
-											className={transactionsStyles.currentSortIcon}
+											className={
+												transactionsStyles.currentSortIcon
+											}
 											alt="Descending sort"
 										/>
 									</div>
 								</div>
 							</th>
-							<th className={transactionsStyles.tableNumData}>Order Amount</th>
 							<th className={transactionsStyles.tableNumData}>
-								<div className={transactionsStyles.transactionFees}>
+								Order Amount
+							</th>
+							<th className={transactionsStyles.tableNumData}>
+								<div
+									className={
+										transactionsStyles.transactionFees
+									}>
 									Transaction fees{" "}
 									<IconInfoCircle
 										className={transactionsStyles.info}
@@ -69,38 +87,52 @@ const Transactions = () => {
 							</th>
 						</tr>
 
-						{transactionData.map((record) => {
-							return <TransactionRecord key={record.id} record={record} />;
-						})}
+						{transactionData
+							.slice(currentPage * 20 - 1, currentPage * 20 + 19)
+							.map((record) => {
+								return (
+									<TransactionRecord
+										key={record.id}
+										record={record}
+									/>
+								);
+							})}
 					</tbody>
 				</table>
 
 				<div className={transactionsStyles.pagination}>
-					<div className={transactionsStyles.previousPage}>
+					<div
+						className={transactionsStyles.previousPage}
+						onClick={() => {
+							currentPage > 1
+								? setCurrentPage(currentPage - 1)
+								: setCurrentPage(totalPages - 1);
+						}}>
 						<IconChevronLeft size={18} />
 						Previous
 					</div>
 
-					<div className={transactionsStyles.pages}>
-						<span className={transactionsStyles.pageNum}>1</span>
-						<span className={transactionsStyles.pageNum}>2</span>
-						<span className={transactionsStyles.pageNum}>...</span>
-						<span
-							className={`${transactionsStyles.pageNum} ${transactionsStyles.activePage}`}
-						>
-							10
-						</span>
-						<span className={transactionsStyles.pageNum}>11</span>
-						<span className={transactionsStyles.pageNum}>12</span>
-						<span className={transactionsStyles.pageNum}>13</span>
-						<span className={transactionsStyles.pageNum}>14</span>
-						<span className={transactionsStyles.pageNum}>15</span>
-						<span className={transactionsStyles.pageNum}>16</span>
-						<span className={transactionsStyles.pageNum}>17</span>
-						<span className={transactionsStyles.pageNum}>18</span>
-					</div>
+					{Array.from({ length: totalPages - 1 }).map((_, index) => {
+						return (
+							<span
+								key={index}
+								className={`${transactionsStyles.pageNum} ${
+									currentPage === index + 1 &&
+									transactionsStyles.activePage
+								}`}
+								onClick={() => setCurrentPage(index + 1)}>
+								{index + 1}
+							</span>
+						);
+					})}
 
-					<div className={transactionsStyles.nextPage}>
+					<div
+						className={transactionsStyles.nextPage}
+						onClick={() => {
+							currentPage < totalPages - 1
+								? setCurrentPage(currentPage + 1)
+								: setCurrentPage(1);
+						}}>
 						Next
 						<IconChevronRight size={18} />
 					</div>

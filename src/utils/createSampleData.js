@@ -2,7 +2,7 @@ import fs from "fs";
 
 const data = [];
 
-for (let i = 0; i < 17; i++) {
+for (let i = 0; i < 110; i++) {
 	const newRecord = {
 		id: i,
 		orderId: `#${(Math.random() * 1000000).toFixed()}`,

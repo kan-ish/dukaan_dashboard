@@ -112,6 +112,10 @@
 .tabItem.active {
 	background-color: #ffffff1a;
 }
+.tabItem:hover {
+	background-color: #ffffff0c;
+}
+
 .tabName {
 	font-family: Inter;
 	font-size: 14px;
@@ -120,6 +124,7 @@
 	letter-spacing: 0em;
 
 	color: #fff;
+	opacity: 0.8;
 }
 
 .availableCredits {

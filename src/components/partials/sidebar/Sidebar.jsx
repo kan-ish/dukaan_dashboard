@@ -28,7 +28,10 @@ const Sidebar = () => {
 				<div className={sidebarStyles.companyHeader}>
 					<div className={sidebarStyles.companyHeaderLeft}>
 						<div className={sidebarStyles.companyThumbnail}>
-							<img src={companyDetails.companyThumbnail} alt="" />
+							<img
+								src={companyDetails.companyThumbnail}
+								alt="Nishyant logo"
+							/>
 						</div>
 					</div>
 
@@ -40,8 +43,7 @@ const Sidebar = () => {
 
 							<a
 								href={companyDetails.companyLink}
-								className={sidebarStyles.companyLink}
-							>
+								className={sidebarStyles.companyLink}>
 								Visit store
 							</a>
 						</div>
@@ -59,13 +61,14 @@ const Sidebar = () => {
 								key={tab.id}
 								className={`${sidebarStyles.tabItem} ${
 									tab.id === 6 && sidebarStyles.active
-								}`}
-							>
+								}`}>
 								<div className={sidebarStyles.tabIcon}>
 									<img src={tab.icon} alt="" />
 								</div>
 
-								<div className={sidebarStyles.tabName}>{tab.name}</div>
+								<div className={sidebarStyles.tabName}>
+									{tab.name}
+								</div>
 							</div>
 						);
 					})}
@@ -84,7 +87,9 @@ const Sidebar = () => {
 						Available credits
 					</div>
 
-					<div className={sidebarStyles.availableCreditsAmt}>222.10</div>
+					<div className={sidebarStyles.availableCreditsAmt}>
+						222.10
+					</div>
 				</div>
 			</div>
 		</div>
