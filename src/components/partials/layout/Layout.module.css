@@ -8,6 +8,10 @@
 	width: 224px;
 }
 
+.closeSideBar {
+	display: none;
+}
+
 .main {
 	flex: 1;
 
@@ -18,4 +22,29 @@
 .children {
 	flex: 1;
 	overflow: scroll;
+}
+
+@media (max-width: 900px) {
+	.container {
+		position: relative;
+	}
+
+	.sidebar {
+		position: absolute;
+		left: 0;
+		z-index: 10;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	.closeSideBar {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 55px;
+	}
+
+	.sidebar.hidden {
+		display: none;
+	}
 }

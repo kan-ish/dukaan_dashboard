@@ -18,6 +18,10 @@
 	gap: 16px;
 }
 
+.sideBarToggle {
+	display: none;
+}
+
 .pageTitle {
 	font-family: Inter;
 	font-size: 15px;
@@ -69,6 +73,7 @@
 .searchInput {
 	flex: 1;
 	height: 100%;
+	width: 100%;
 
 	background-color: inherit;
 }
@@ -99,4 +104,18 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@media (max-width: 900px) {
+	.sideBarToggle {
+		display: block;
+	}
+
+	.pageHelpText {
+		display: none;
+	}
+
+	.searchBarContainer {
+		width: 21%;
+	}
 }

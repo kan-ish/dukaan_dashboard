@@ -1,7 +1,7 @@
 import sidebarStyles from "./Sidebar.module.css";
 import { IconChevronDown } from "@tabler/icons-react";
 
-const Sidebar = () => {
+const Sidebar = ({ modalRef }) => {
 	const companyDetails = {
 		companyName: "Nishyan",
 		companyLink: "link-to-company",
@@ -23,7 +23,7 @@ const Sidebar = () => {
 	];
 
 	return (
-		<div className={sidebarStyles.container}>
+		<div className={sidebarStyles.container} ref={modalRef}>
 			<div className={sidebarStyles.allcompanySpecificStuff}>
 				<div className={sidebarStyles.companyHeader}>
 					<div className={sidebarStyles.companyHeaderLeft}>

@@ -1,16 +1,25 @@
 import headerStyles from "./Header.module.css";
 
-import { IconHelp, IconSearch } from "@tabler/icons-react";
+import { IconHelp, IconSearch, IconMenu2 } from "@tabler/icons-react";
 
-const Header = () => {
+const Header = ({ isSideBarOpen, setIsSideBarOpen }) => {
 	return (
 		<div className={headerStyles.container}>
 			<div className={headerStyles.headerLeft}>
+				<div
+					className={headerStyles.sideBarToggle}
+					onClick={() => setIsSideBarOpen(!isSideBarOpen)}>
+					<IconMenu2 size={18} />
+				</div>
+
 				<div className={headerStyles.pageTitle}>Payments</div>
 
 				<div className={headerStyles.pageHelp}>
 					<IconHelp size={15} />
-					How it works
+
+					<span className={headerStyles.pageHelpText}>
+						How it works
+					</span>
 				</div>
 			</div>
 
