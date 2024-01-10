@@ -1,6 +1,4 @@
 .container {
-	padding: 32px;
-
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -12,10 +10,4 @@
 
 .transactionsContainer {
 	flex: 1;
-}
-
-@media (max-width: 900px) {
-	.container {
-		padding: 20px;
-	}
 }

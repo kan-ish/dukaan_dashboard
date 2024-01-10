@@ -22,7 +22,7 @@
 .children {
 	flex: 1;
 	overflow: scroll;
-	margin-bottom: 50px;
+	padding: 32px;
 }
 
 @media (max-width: 900px) {
@@ -51,5 +51,9 @@
 
 	.sidebar.hidden {
 		display: none;
+	}
+
+	.children {
+		padding: 20px;
 	}
 }
